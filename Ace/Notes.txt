@@ -1,0 +1,9 @@
+Microsoft.CodeAnalysis.FxCopAnalyzers
+
+PM> Add-Migration Initial
+Build started...
+Build succeeded.
+To undo this action, use Remove-Migration.
+PM> Update-Database
+Build started...
+Build succeeded.

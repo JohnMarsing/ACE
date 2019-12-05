@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ace.Web", "Ace.Web\Ace.Web.csproj", "{5853B468-A654-427D-9CD9-D00FBBB80E36}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0EBC62CF-FB10-4E1A-A1AF-0496EC466A08}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Customer_Invoice_InvoiceItem_Foriegn_Keys.sql = ..\Documentation\Customer_Invoice_InvoiceItem_Foriegn_Keys.sql
+		..\Documentation\Diagram.png = ..\Documentation\Diagram.png
+		..\Documentation\Diagram_Customer_Invoice_InvoiceItem.png = ..\Documentation\Diagram_Customer_Invoice_InvoiceItem.png
+		Notes.txt = Notes.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

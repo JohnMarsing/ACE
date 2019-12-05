@@ -1,0 +1,176 @@
+PM> Update-Database -verbose
+Using project 'Ace.Web'.
+Using startup project 'Ace.Web'.
+Build started...
+Build succeeded.
+C:\Program Files\dotnet\dotnet.exe exec --depsfile "C:\Users\John Marsing\Source\Repos\ACE\Ace\Ace.Web\bin\Debug\netcoreapp3.0\Ace.Web.deps.json" --additionalprobingpath "C:\Users\John Marsing\.nuget\packages" --additionalprobingpath "C:\Program Files\dotnet\sdk\NuGetFallbackFolder" --runtimeconfig "C:\Users\John Marsing\Source\Repos\ACE\Ace\Ace.Web\bin\Debug\netcoreapp3.0\Ace.Web.runtimeconfig.json" "C:\Users\John Marsing\.nuget\packages\microsoft.entityframeworkcore.tools\3.1.0\tools\netcoreapp2.0\any\ef.dll" database update --verbose --no-color --prefix-output --assembly "C:\Users\John Marsing\Source\Repos\ACE\Ace\Ace.Web\bin\Debug\netcoreapp3.0\Ace.Web.dll" --startup-assembly "C:\Users\John Marsing\Source\Repos\ACE\Ace\Ace.Web\bin\Debug\netcoreapp3.0\Ace.Web.dll" --project-dir "C:\Users\John Marsing\Source\Repos\ACE\Ace\Ace.Web\\" --language C# --working-dir "C:\Users\John Marsing\Source\Repos\ACE\Ace" --root-namespace Ace.Web
+Using assembly 'Ace.Web'.
+Using startup assembly 'Ace.Web'.
+Using application base 'C:\Users\John Marsing\Source\Repos\ACE\Ace\Ace.Web\bin\Debug\netcoreapp3.0'.
+Using working directory 'C:\Users\John Marsing\Source\Repos\ACE\Ace\Ace.Web'.
+Using root namespace 'Ace.Web'.
+Using project directory 'C:\Users\John Marsing\Source\Repos\ACE\Ace\Ace.Web\'.
+Finding DbContext classes...
+Finding IDesignTimeDbContextFactory implementations...
+Finding application service provider...
+Finding Microsoft.Extensions.Hosting service provider...
+Using environment 'Development'.
+Using application service provider from Microsoft.Extensions.Hosting.
+Finding DbContext classes in the project...
+Found DbContext 'TrackerContext'.
+Using context 'TrackerContext'.
+Finding design-time services for provider 'Microsoft.EntityFrameworkCore.SqlServer'...
+Using design-time services from provider 'Microsoft.EntityFrameworkCore.SqlServer'.
+Finding design-time services referenced by assembly 'Ace.Web'.
+No referenced design-time services were found.
+Finding IDesignTimeServices implementations in assembly 'Ace.Web'...
+No design-time services were found.
+Migrating using database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opening connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+An error occurred using the connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opening connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+An error occurred using the connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opening connection to database 'master' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opened connection to database 'master' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (4ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [TrackerDB];
+Executed DbCommand (193ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [TrackerDB];
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TrackerDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (49ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TrackerDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Closing connection to database 'master' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Closed connection to database 'master' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opening connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opened connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Closing connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Closed connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+DetectChanges starting for 'TrackerContext'.
+DetectChanges completed for 'TrackerContext'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Opening connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opened connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Closing connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Closed connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opening connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opened connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Closing connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Closed connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Creating DbCommand for 'ExecuteScalar'.
+Created DbCommand for 'ExecuteScalar' (0ms).
+Opening connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opened connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Closing connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Closed connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Creating DbCommand for 'ExecuteReader'.
+Created DbCommand for 'ExecuteReader' (0ms).
+Opening connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opened connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+A data reader was disposed.
+Closing connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Closed connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Applying migration '20191205065456_Initial'.
+Opening connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Opened connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Beginning transaction with isolation level 'Unspecified'.
+Began transaction with isolation level 'ReadCommitted'.
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Steps] (
+    [StepId] int NOT NULL IDENTITY,
+    [StepName] nvarchar(max) NULL,
+    [ContactId] int NOT NULL,
+    CONSTRAINT [PK_Steps] PRIMARY KEY ([StepId])
+);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Steps] (
+    [StepId] int NOT NULL IDENTITY,
+    [StepName] nvarchar(max) NULL,
+    [ContactId] int NOT NULL,
+    CONSTRAINT [PK_Steps] PRIMARY KEY ([StepId])
+);
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Contacts] (
+    [ContactId] int NOT NULL,
+    [FullName] nvarchar(max) NULL,
+    [PhoneNbr] nvarchar(max) NULL,
+    [IsPrimary] bit NOT NULL,
+    CONSTRAINT [PK_Contacts] PRIMARY KEY ([ContactId]),
+    CONSTRAINT [FK_Contacts_Steps_ContactId] FOREIGN KEY ([ContactId]) REFERENCES [Steps] ([StepId]) ON DELETE CASCADE
+);
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Contacts] (
+    [ContactId] int NOT NULL,
+    [FullName] nvarchar(max) NULL,
+    [PhoneNbr] nvarchar(max) NULL,
+    [IsPrimary] bit NOT NULL,
+    CONSTRAINT [PK_Contacts] PRIMARY KEY ([ContactId]),
+    CONSTRAINT [FK_Contacts_Steps_ContactId] FOREIGN KEY ([ContactId]) REFERENCES [Steps] ([StepId]) ON DELETE CASCADE
+);
+Creating DbCommand for 'ExecuteNonQuery'.
+Created DbCommand for 'ExecuteNonQuery' (0ms).
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191205065456_Initial', N'3.1.0');
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191205065456_Initial', N'3.1.0');
+Committing transaction.
+Committing transaction.
+Disposing transaction.
+Closing connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+Closed connection to database 'TrackerDB' on server 'WIN81DESKTOP\SQLEXPRESS01'.
+'TrackerContext' disposed.
+Done.
+PM> 
