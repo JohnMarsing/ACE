@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ace.Web.Migrations
 {
     [DbContext(typeof(TrackerContext))]
-    [Migration("20191205065456_Initial")]
+    [Migration("20191205184914_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,7 +23,9 @@ namespace Ace.Web.Migrations
             modelBuilder.Entity("Ace.Web.Core.Contact", b =>
                 {
                     b.Property<int>("ContactId")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
@@ -46,9 +48,6 @@ namespace Ace.Web.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ContactId")
-                        .HasColumnType("int");
-
                     b.Property<string>("StepName")
                         .HasColumnType("nvarchar(max)");
 
@@ -57,11 +56,39 @@ namespace Ace.Web.Migrations
                     b.ToTable("Steps");
                 });
 
-            modelBuilder.Entity("Ace.Web.Core.Contact", b =>
+            modelBuilder.Entity("Ace.Web.Core.StepContact", b =>
                 {
-                    b.HasOne("Ace.Web.Core.Step", "Step")
-                        .WithMany("Contacts")
+                    b.Property<int>("StepContactId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ContactId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StepId")
+                        .HasColumnType("int");
+
+                    b.HasKey("StepContactId");
+
+                    b.HasIndex("ContactId");
+
+                    b.HasIndex("StepId");
+
+                    b.ToTable("StepContact");
+                });
+
+            modelBuilder.Entity("Ace.Web.Core.StepContact", b =>
+                {
+                    b.HasOne("Ace.Web.Core.Contact", "Contact")
+                        .WithMany("StepsContact")
                         .HasForeignKey("ContactId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Ace.Web.Core.Step", "Step")
+                        .WithMany("ContactSteps")
+                        .HasForeignKey("StepId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

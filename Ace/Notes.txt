@@ -17,3 +17,9 @@ https://jonhilton.net/use-blazor-in-existing-app/
 
 
 https://stackoverflow.com/questions/46839391/unable-to-determine-the-relationship-represented-by-navigation-property-asp-net
+
+The entity type 'StepContact' requires a primary key to be defined. If you intended to use a keyless entity type call 'HasNoKey()'.
+
+To change the IDENTITY property of a column, the column needs to be dropped and recreated.
+
+https://thisworksonmymachine.com/2017/02/13/ef-core-the-setup-part-4/

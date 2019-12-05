@@ -9,8 +9,12 @@ namespace Ace.Web.Core
 		public string FullName { get; set; }
 		public string PhoneNbr { get; set; }
 		public bool IsPrimary { get; set; }
+        
+        public virtual List<StepContact> StepsContact { get; set; }
 
-        public virtual List<Step> Steps { get; set; }
+
+        //public virtual List<Step> PrimarySteps { get; set; }
+        //public virtual List<Step> SecondarySteps { get; set; }
 
         //[ForeignKey("ContactId")]
         //public virtual Step Step { get; set; }
