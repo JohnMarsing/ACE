@@ -7,3 +7,9 @@ To undo this action, use Remove-Migration.
 PM> Update-Database
 Build started...
 Build succeeded.
+
+Needed links
+
+https://entityframeworkcore.com/providers-sql-server
+https://jonhilton.net/mediatr-and-razor-components/
+https://jonhilton.net/use-blazor-in-existing-app/
