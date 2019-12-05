@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ace.Web.Core
 {
-	public class Contact
+    [Table("Contact", Schema = "BallotTrack")]
+    public class Contact
 	{
 		public int ContactId { get; set; }
 		public string FullName { get; set; }
@@ -11,12 +12,5 @@ namespace Ace.Web.Core
 		public bool IsPrimary { get; set; }
         
         public virtual List<StepContact> StepsContact { get; set; }
-
-
-        //public virtual List<Step> PrimarySteps { get; set; }
-        //public virtual List<Step> SecondarySteps { get; set; }
-
-        //[ForeignKey("ContactId")]
-        //public virtual Step Step { get; set; }
     }
 }

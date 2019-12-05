@@ -1,20 +1,13 @@
 Microsoft.CodeAnalysis.FxCopAnalyzers
 
 PM> Add-Migration Initial
-Build started...
-Build succeeded.
-To undo this action, use Remove-Migration.
-PM> Update-Database
-Build started...
-Build succeeded.
-
-Needed links
+Remove-Migration
+Update-Database
+Update-Database LastGoodMigration
 
 https://entityframeworkcore.com/providers-sql-server
 https://jonhilton.net/mediatr-and-razor-components/
 https://jonhilton.net/use-blazor-in-existing-app/
-
-
 
 https://stackoverflow.com/questions/46839391/unable-to-determine-the-relationship-represented-by-navigation-property-asp-net
 
@@ -23,3 +16,22 @@ The entity type 'StepContact' requires a primary key to be defined. If you inten
 To change the IDENTITY property of a column, the column needs to be dropped and recreated.
 
 https://thisworksonmymachine.com/2017/02/13/ef-core-the-setup-part-4/
+
+
+
+
+//.UseSqlServer(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=TrackerDB;");
+//Data Source=ITS-416957-D\SQLEXPRESS;Initial Catalog=TrackerDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+//.UseSqlServer(@"Data Source=WIN81DESKTOP\SQLEXPRESS01;Initial Catalog=TrackerDB;Trusted_Connection=True;MultipleActiveResultSets=true;");
+
+/*
+	public class ApplicationDbContext : IdentityDbContext
+	{
+		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+				: base(options)
+		{
+		}
+	}
+ */
+ 
+

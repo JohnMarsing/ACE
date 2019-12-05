@@ -1,5 +1,8 @@
-﻿namespace Ace.Web.Core
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Ace.Web.Core
 {
+    [Table("StepContact", Schema = "BallotTrack")]
     public class StepContact
     {
         public int StepContactId { get; set; }
