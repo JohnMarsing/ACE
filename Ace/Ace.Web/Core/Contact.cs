@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ace.Web.Core
 {
@@ -9,7 +10,9 @@ namespace Ace.Web.Core
 		public string PhoneNbr { get; set; }
 		public bool IsPrimary { get; set; }
 
-		[ForeignKey("ContactId")]
-		public virtual Step Step { get; set; }
-	}
+        public virtual List<Step> Steps { get; set; }
+
+        //[ForeignKey("ContactId")]
+        //public virtual Step Step { get; set; }
+    }
 }

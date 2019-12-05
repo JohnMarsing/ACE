@@ -13,3 +13,7 @@ Needed links
 https://entityframeworkcore.com/providers-sql-server
 https://jonhilton.net/mediatr-and-razor-components/
 https://jonhilton.net/use-blazor-in-existing-app/
+
+
+
+https://stackoverflow.com/questions/46839391/unable-to-determine-the-relationship-represented-by-navigation-property-asp-net
